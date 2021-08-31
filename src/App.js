@@ -1,25 +1,25 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from "react";
+import github from "./api/github";
+import SearchBar from "./components/SearchBar";
+import ProfileCard from "./components/ProfileCard";
+import "./App.css";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+export default class App extends Component {
+	state = { user: [] };
+
+	onSearchSubmit = async (userName) => {
+		const response = await github.get(userName);
+		console.log(response.data);
+		this.setState({ user: response.data });
+	};
+
+	render() {
+		return (
+			<div>
+				<SearchBar onSubmit={this.onSearchSubmit} />
+				{/* <img src={this.state.user.avatar_url} alt="" /> */}
+				<ProfileCard user={this.state.user} />
+			</div>
+		);
+	}
 }
-
-export default App;
