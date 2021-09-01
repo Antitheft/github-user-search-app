@@ -7,6 +7,10 @@ import "./App.css";
 export default class App extends Component {
 	state = { user: [] };
 
+	componentDidMount() {
+		this.onSearchSubmit("Octocat");
+	}
+
 	onSearchSubmit = async (userName) => {
 		const response = await github.get(userName);
 		console.log(response.data);
