@@ -12,7 +12,9 @@ const ProfileCard = ({ user }) => {
 					<h2>The Octocat</h2>
 					<p>{user.login}</p>
 					<span>Joined </span>
-					<Moment format="DD MMM YYYY">{user.created_at}</Moment>
+					<Moment className="join-date" format="DD MMM YYYY">
+						{user.created_at}
+					</Moment>
 				</div>
 			</div>
 			<div className="profile-bio">This profile has no bio.</div>
