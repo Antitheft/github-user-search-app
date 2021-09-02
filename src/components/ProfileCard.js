@@ -32,6 +32,26 @@ const ProfileCard = ({ user }) => {
 					<p>{user.following}</p>
 				</div>
 			</div>
+			<div className="profile-socials">
+				<div className="social">
+					<img src={"./assets/icon-location.svg"} alt="" />
+					<p>{user.location}</p>
+				</div>
+				<div className="social">
+					<img src={"./assets/icon-website.svg"} alt="" />
+					<p>{user.blog}</p>
+				</div>
+				<div className="social">
+					<img src={"./assets/icon-twitter.svg"} alt="" />
+					<p>
+						{user.twitter_username ? user.twitter_username : "Not Available"}
+					</p>
+				</div>
+				<div className="social">
+					<img src={"./assets/icon-company.svg"} alt="" />
+					<p>{user.company}</p>
+				</div>
+			</div>
 			<div className="profile-footer"></div>
 		</div>
 	);
