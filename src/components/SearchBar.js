@@ -1,4 +1,5 @@
 import React from "react";
+import "./SearchBar.css";
 
 class SearchBar extends React.Component {
 	state = { term: "" };
@@ -12,16 +13,19 @@ class SearchBar extends React.Component {
 
 	render() {
 		return (
-			<div className="ui segment">
-				<form onSubmit={this.onFormSubmit} className="ui form">
-					<div className="field">
-						<label>User Search</label>
-						<input
-							type="text"
-							value={this.state.term}
-							onChange={(e) => this.setState({ term: e.target.value })}
-						/>
-					</div>
+			<div className="search">
+				<form className="search-form" onSubmit={this.onFormSubmit}>
+					<img src={"./assets/icon-search.svg"} alt="" />
+					<input
+						type="text"
+						placeholder="Search GitHub Username..."
+						value={this.state.term}
+						onChange={(e) => this.setState({ term: e.target.value })}
+						className="search-field"
+					/>
+					<span onClick={this.onFormSubmit} className="search-btn">
+						Search
+					</span>
 				</form>
 			</div>
 		);
