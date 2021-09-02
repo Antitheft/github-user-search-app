@@ -190,3 +190,7 @@ html {
 .social p {
 	font-size: 0.8125rem;
 }
+
+.not-available {
+	opacity: 0.5;
+}

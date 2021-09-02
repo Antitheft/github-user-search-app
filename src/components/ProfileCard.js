@@ -8,8 +8,7 @@ const ProfileCard = ({ user }) => {
 			<div className="profile-header">
 				<img className="avatar" src={user.avatar_url} alt="" />
 				<div className="profile-user">
-					{/* <h2>{user.name}</h2> */}
-					<h2>The Octocat</h2>
+					<h2>{user.name ? user.name : user.login}</h2>
 					<p>{user.login}</p>
 					<span>Joined </span>
 					<Moment className="join-date" format="DD MMM YYYY">
@@ -35,11 +34,11 @@ const ProfileCard = ({ user }) => {
 			<div className="profile-socials">
 				<div className="social">
 					<img src={"./assets/icon-location.svg"} alt="" />
-					<p>{user.location}</p>
+					<p>{user.location ? user.location : "Not Available"}</p>
 				</div>
 				<div className="social">
 					<img src={"./assets/icon-website.svg"} alt="" />
-					<p>{user.blog}</p>
+					<p>{user.blog ? user.blog : "Not Available"}</p>
 				</div>
 				<div className="social">
 					<img src={"./assets/icon-twitter.svg"} alt="" />
@@ -49,7 +48,7 @@ const ProfileCard = ({ user }) => {
 				</div>
 				<div className="social">
 					<img src={"./assets/icon-company.svg"} alt="" />
-					<p>{user.company}</p>
+					<p>{user.company ? user.company : "Not Available"}</p>
 				</div>
 			</div>
 			<div className="profile-footer"></div>
