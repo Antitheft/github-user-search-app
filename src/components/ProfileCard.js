@@ -125,15 +125,15 @@ const ProfileCard = ({ user }) => {
 			<ProfileStats>
 				<Stat>
 					<StatHeader>Repos</StatHeader>
-					<StatNumber>{user.public_repos}</StatNumber>
+					<StatNumber> {user.public_repos} </StatNumber>
 				</Stat>
 				<Stat>
 					<StatHeader>Followers</StatHeader>
-					<StatNumber>{user.followers}</StatNumber>
+					<StatNumber> {user.followers} </StatNumber>
 				</Stat>
 				<Stat>
 					<StatHeader>Following</StatHeader>
-					<StatNumber>{user.following}</StatNumber>
+					<StatNumber> {user.following} </StatNumber>
 				</Stat>
 			</ProfileStats>
 			<ProfileSocials>
