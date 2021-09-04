@@ -8,6 +8,7 @@ const HeaderContainer = styled.div`
 
 const HeaderText = styled.h1`
 	font-size: 1.5rem;
+	color: ${(props) => props.theme.userNameFC};
 `;
 
 const HeaderButton = styled.div`
@@ -19,23 +20,21 @@ const ButtonText = styled.p`
 	margin-right: 1rem;
 	font-size: 0.85rem;
 	font-weight: 700;
+	color: ${(props) => props.theme.primaryFC};
 `;
 
 const ButtonIcon = styled.div`
-	background-image: url("./assets/icon-moon.svg");
+	background-image: ${(props) => props.theme.themeIconBg};
 	width: 20px;
 	height: 20px;
 	margin: auto;
 `;
 
 class MainHeader extends React.Component {
-	state = { labelText: "D A R K" };
-
 	render() {
 		return (
 			<HeaderContainer>
 				<HeaderText>devfinder</HeaderText>
-
 				<HeaderButton onClick={this.props.onClick}>
 					<ButtonText>{this.props.currentTheme}</ButtonText>
 					<ButtonIcon></ButtonIcon>

@@ -30,6 +30,7 @@ const SearchInput = styled.input`
 	outline: none;
 	background: none;
 	font-size: 0.93rem;
+	color: ${(props) => props.theme.userNameFC};
 `;
 const SearchButton = styled.span`
 	width: 84px;

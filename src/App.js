@@ -28,6 +28,8 @@ const theme = {
 	userNameFC: "2B3442",
 	primaryFC: "#4B6A9B",
 	secondaryFC: "#697C9A",
+
+	themeIconBg: 'url("./assets/icon-moon.svg")',
 };
 
 const themeDark = {
@@ -38,6 +40,8 @@ const themeDark = {
 	userNameFC: "#FFFFFF",
 	primaryFC: "#FFFFFF",
 	secondaryFC: "#FFFFFF",
+
+	themeIconBg: 'url("./assets/icon-sun.svg")',
 };
 
 export default class App extends Component {
