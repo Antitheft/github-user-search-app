@@ -21,8 +21,8 @@ const GlobalStyle = createGlobalStyle`
 `;
 
 const theme = {
-	mainBg: "white",
-	cardBg: "#white",
+	mainBg: "#f6f8ff",
+	cardBg: "white",
 	statsBg: "#f6f8ff",
 
 	userNameFC: "2B3442",
