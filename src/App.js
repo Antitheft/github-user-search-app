@@ -21,6 +21,7 @@ const GlobalStyle = createGlobalStyle`
 
 const theme = {
 	mainBg: "white",
+	cardBg: "#white",
 };
 
 const themeDark = {
