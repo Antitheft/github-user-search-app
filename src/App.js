@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import github from "./api/github";
 import SearchBar from "./components/SearchBar";
 import ProfileCard from "./components/ProfileCard";
-import { createGlobalStyle, ThemeProvider } from "styled-components";
+import styled, { createGlobalStyle, ThemeProvider } from "styled-components";
 
 const GlobalStyle = createGlobalStyle`
 	html,body {
@@ -15,16 +15,17 @@ const GlobalStyle = createGlobalStyle`
 		justify-content: center;
 		align-items: center;
 		font-family: "Space Mono", monospace;
-		/* background: ${(props) => (props.lightMode ? "#f6f8ff" : "#141D2F")}; */
+		background-color: ${(props) => props.theme.mainBg};
 	}
 `;
 
 const theme = {
-	main: "white",
+	mainBg: "white",
 };
 
 const themeDark = {
-	main: "#141D2F",
+	mainBg: "#141D2F",
+	cardBg: "#1E2A47",
 };
 
 export default class App extends Component {

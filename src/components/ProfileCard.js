@@ -4,7 +4,7 @@ import styled from "styled-components";
 
 const Card = styled.div`
 	width: 335px;
-	background-color: ${(props) => props.theme.main};
+	background-color: ${(props) => props.theme.mainBg};
 	/* background: ${(props) => (props.lightModes ? "#fefefe" : "#141D2F")}; */
 	box-shadow: 0px 16px 30px -10px rgba(70, 96, 187, 0.198567);
 	border-radius: 15px;
