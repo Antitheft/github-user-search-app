@@ -23,12 +23,20 @@ const theme = {
 	mainBg: "white",
 	cardBg: "#white",
 	statsBg: "#f6f8ff",
+
+	userNameFC: "2B3442",
+	primaryFC: "#4B6A9B",
+	secondaryFC: "#697C9A",
 };
 
 const themeDark = {
 	mainBg: "#141D2F",
 	cardBg: "#1E2A47",
 	statsBg: "#141D2F",
+
+	userNameFC: "#FFFFFF",
+	primaryFC: "#FFFFFF",
+	secondaryFC: "#FFFFFF",
 };
 
 export default class App extends Component {

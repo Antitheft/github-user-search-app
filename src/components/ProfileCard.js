@@ -38,6 +38,7 @@ const UserName = styled.h2`
 	font-weight: 700;
 	font-size: 1rem;
 	margin: 0;
+	color: ${(props) => props.theme.userNameFC};
 `;
 
 const UserLogin = styled.p`
@@ -47,7 +48,7 @@ const UserLogin = styled.p`
 
 const JoinedDate = styled.div`
 	font-size: 0.8rem;
-	color: #697c9a;
+	color: ${(props) => props.theme.secondaryFC};
 `;
 
 const ProfileBio = styled.div`
@@ -55,7 +56,7 @@ const ProfileBio = styled.div`
 
 	margin: 2rem 0;
 	font-size: 0.85rem;
-	color: #697c9a;
+	color: ${(props) => props.theme.primaryFC};
 `;
 
 const ProfileStats = styled.div`
@@ -75,12 +76,13 @@ const Stat = styled.div`
 `;
 const StatHeader = styled.h3`
 	font-size: 0.6875rem;
-	color: #4b6a9b;
+	font-weight: 400;
+	color: ${(props) => props.theme.primaryFC};
 `;
 const StatNumber = styled.p`
 	font-size: 1rem;
 	font-weight: 700;
-	color: #2b3442;
+	color: ${(props) => props.theme.userNameFC};
 `;
 
 const ProfileSocials = styled.div`
@@ -102,6 +104,7 @@ const SocialImage = styled.img`
 `;
 const SocialLabel = styled.p`
 	font-size: 0.8125rem;
+	color: ${(props) => props.theme.primaryFC};
 `;
 
 const ProfileCard = ({ user }) => {
