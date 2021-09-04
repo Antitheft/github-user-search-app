@@ -61,7 +61,7 @@ const ProfileBio = styled.div`
 
 const ProfileStats = styled.div`
 	width: 17.4375rem;
-	height: 5.3125rem;
+	height: 5.33rem;
 	display: flex;
 	justify-content: space-evenly;
 	align-items: center;
