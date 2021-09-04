@@ -5,7 +5,7 @@ import styled from "styled-components";
 const SearchContainer = styled.div`
 	width: 20.4375rem;
 	height: 3.75rem;
-	background: #fefefe;
+	background-color: ${(props) => props.theme.cardBg};
 	box-shadow: 0px 16px 30px -10px rgba(70, 96, 187, 0.198567);
 	border-radius: 15px;
 
@@ -29,8 +29,7 @@ const SearchInput = styled.input`
 	width: 11.5rem;
 	border: none;
 	outline: none;
-
-	color: #4b6a9b;
+	background: none;
 	font-size: 0.93rem;
 `;
 const SearchButton = styled.span`

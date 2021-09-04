@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import github from "./api/github";
 import SearchBar from "./components/SearchBar";
 import ProfileCard from "./components/ProfileCard";
-import styled, { createGlobalStyle, ThemeProvider } from "styled-components";
+import { createGlobalStyle, ThemeProvider } from "styled-components";
 
 const GlobalStyle = createGlobalStyle`
 	html,body {
