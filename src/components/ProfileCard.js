@@ -65,7 +65,7 @@ const ProfileStats = styled.div`
 	justify-content: space-evenly;
 	align-items: center;
 
-	background: #f6f8ff;
+	background: ${(props) => props.theme.statsBg};
 	border-radius: 10px;
 `;
 

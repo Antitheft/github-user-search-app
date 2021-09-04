@@ -22,11 +22,13 @@ const GlobalStyle = createGlobalStyle`
 const theme = {
 	mainBg: "white",
 	cardBg: "#white",
+	statsBg: "#f6f8ff",
 };
 
 const themeDark = {
 	mainBg: "#141D2F",
 	cardBg: "#1E2A47",
+	statsBg: "#141D2F",
 };
 
 export default class App extends Component {
