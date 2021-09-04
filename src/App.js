@@ -3,6 +3,7 @@ import github from "./api/github";
 import SearchBar from "./components/SearchBar";
 import ProfileCard from "./components/ProfileCard";
 import { createGlobalStyle, ThemeProvider } from "styled-components";
+import MainHeader from "./components/MainHeader";
 
 const GlobalStyle = createGlobalStyle`
 	html,body {
@@ -40,7 +41,7 @@ const themeDark = {
 };
 
 export default class App extends Component {
-	state = { user: [], themeSelected: "default" };
+	state = { user: [], themeSelected: "D A R K" };
 
 	componentDidMount() {
 		this.onSearchSubmit("Octocat");
@@ -53,15 +54,15 @@ export default class App extends Component {
 	};
 
 	onButtonClick = () => {
-		if (this.state.themeSelected === "default") {
-			this.setState({ themeSelected: "dark" });
+		if (this.state.themeSelected === "D A R K") {
+			this.setState({ themeSelected: "L I G H T" });
 		} else {
-			this.setState({ themeSelected: "default" });
+			this.setState({ themeSelected: "D A R K" });
 		}
 	};
 
 	updateTheme = () => {
-		if (this.state.themeSelected === "default") {
+		if (this.state.themeSelected === "D A R K") {
 			return theme;
 		} else {
 			return themeDark;
@@ -72,8 +73,12 @@ export default class App extends Component {
 		return (
 			<ThemeProvider theme={this.updateTheme()}>
 				<GlobalStyle />
-				<button onClick={this.onButtonClick}>Click</button>
-				<label>{this.state.themeSelected}</label>
+				<MainHeader
+					onClick={this.onButtonClick}
+					currentTheme={this.state.themeSelected}
+				/>
+				{/* <button onClick={this.onButtonClick}>Click</button>
+				<label>{this.state.themeSelected}</label> */}
 				<SearchBar onSubmit={this.onSearchSubmit} />
 				<ProfileCard user={this.state.user} />
 			</ThemeProvider>

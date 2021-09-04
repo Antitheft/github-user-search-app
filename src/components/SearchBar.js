@@ -1,5 +1,4 @@
 import React from "react";
-import "./SearchBar.css";
 import styled from "styled-components";
 
 const SearchContainer = styled.div`
@@ -51,7 +50,7 @@ class SearchBar extends React.Component {
 
 	onFormSubmit = (event) => {
 		event.preventDefault();
-
+		//Call onSubmit Passed as Prop
 		this.props.onSubmit(this.state.term);
 	};
 
