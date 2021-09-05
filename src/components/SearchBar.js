@@ -11,7 +11,7 @@ const SearchContainer = styled.div`
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	transition: width 300ms;
+	transition: width 250ms;
 
 	@media only screen and (min-width: 768px) {
 		width: 35.8125em;
@@ -28,6 +28,7 @@ const Form = styled.form`
 const SearchIcon = styled.img`
 	width: 1.25rem;
 	height: 1.25rem;
+	margin: 0.75em;
 `;
 const SearchInput = styled.input`
 	width: 11.5rem;
@@ -36,15 +37,15 @@ const SearchInput = styled.input`
 	background: none;
 	font-size: 0.93rem;
 	color: ${(props) => props.theme.userNameFC};
-	transition: width 300ms;
+	transition: width 250ms;
 
 	@media only screen and (min-width: 768px) {
 		width: 75%;
 	}
 `;
 const SearchButton = styled.span`
-	width: 84px;
-	height: 46px;
+	width: 5.25em;
+	height: 2.875em;
 	border-radius: 10px;
 
 	color: white;
@@ -54,6 +55,12 @@ const SearchButton = styled.span`
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	transition: 250ms;
+
+	@media only screen and (min-width: 768px) {
+		width: 6.625em;
+		height: 3.125em;
+	}
 `;
 
 class SearchBar extends React.Component {

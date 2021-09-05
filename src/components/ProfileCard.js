@@ -17,7 +17,7 @@ const Card = styled.div`
 	justify-content: center;
 	align-items: center;
 	font-family: "Space Mono", monospace;
-	transition: width 300ms;
+	transition: width 250ms, background-color 500ms;
 
 	@media only screen and (min-width: 768px) {
 		width: 35.8125em;
@@ -25,17 +25,23 @@ const Card = styled.div`
 `;
 
 const CardHeader = styled.div`
-	width: 17.4375rem;
+	width: 85%;
 	display: flex;
 	justify-content: flex-start;
 	align-items: center;
 	margin-top: 1rem;
+	transition: 250ms;
 `;
 
 const Avatar = styled.img`
-	width: 70px;
-	height: 70px;
+	width: 4.375em;
+	height: 4.375em;
 	border-radius: 50%;
+
+	@media only screen and (min-width: 768px) {
+		width: 7.3125em;
+		height: 7.3125em;
+	}
 `;
 
 const ProfileInfo = styled.div`
@@ -48,28 +54,41 @@ const UserName = styled.h2`
 	font-size: 1rem;
 	margin: 0;
 	color: ${(props) => props.theme.userNameFC};
+	@media only screen and (min-width: 768px) {
+		font-size: 1.625rem;
+	}
 `;
 
 const UserLogin = styled.p`
 	font-size: 0.85rem;
 	color: #0079ff;
+	@media only screen and (min-width: 768px) {
+		font-size: 1rem;
+	}
 `;
 
 const JoinedDate = styled.div`
 	font-size: 0.8rem;
 	color: ${(props) => props.theme.secondaryFC};
+
+	@media only screen and (min-width: 768px) {
+		font-size: 0.95rem;
+	}
 `;
 
 const ProfileBio = styled.div`
-	width: 17.4375rem;
+	width: 85%;
 
 	margin: 2rem 0;
 	font-size: 0.85rem;
 	color: ${(props) => props.theme.primaryFC};
+	@media only screen and (min-width: 768px) {
+		font-size: 0.95rem;
+	}
 `;
 
 const ProfileStats = styled.div`
-	width: 17.4375rem;
+	width: 85%;
 	height: 5.33rem;
 	display: flex;
 	justify-content: space-evenly;
@@ -95,17 +114,23 @@ const StatNumber = styled.p`
 `;
 
 const ProfileSocials = styled.div`
-	width: 17.4375rem;
+	width: 85%;
 	margin: 1rem 0 2.5rem 0;
 	display: flex;
 	flex-direction: column;
 	justify-content: flex-start;
+
+	@media only screen and (min-width: 768px) {
+		flex-direction: row;
+		flex-wrap: wrap;
+	}
 `;
 const Social = styled.div`
 	display: flex;
 	justify-content: flex-start;
 	align-items: center;
 	height: 20px;
+	width: 12em;
 	margin-top: 1rem;
 `;
 const SocialImage = styled.img`
