@@ -2,8 +2,12 @@ import React from "react";
 import Moment from "react-moment";
 import styled from "styled-components";
 
+export const device = {
+	tablet: `min-width: 768px`,
+};
+
 const Card = styled.div`
-	width: 335px;
+	width: 20.9375em;
 	background-color: ${(props) => props.theme.cardBg};
 	box-shadow: 0px 16px 30px -10px rgba(70, 96, 187, 0.198567);
 	border-radius: 15px;
@@ -13,6 +17,11 @@ const Card = styled.div`
 	justify-content: center;
 	align-items: center;
 	font-family: "Space Mono", monospace;
+	transition: width 300ms;
+
+	@media only screen and (min-width: 768px) {
+		width: 35.8125em;
+	}
 `;
 
 const CardHeader = styled.div`

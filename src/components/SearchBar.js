@@ -11,6 +11,11 @@ const SearchContainer = styled.div`
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	transition: width 300ms;
+
+	@media only screen and (min-width: 768px) {
+		width: 35.8125em;
+	}
 `;
 const Form = styled.form`
 	width: 100%;
