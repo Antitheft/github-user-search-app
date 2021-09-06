@@ -2,10 +2,6 @@ import React from "react";
 import Moment from "react-moment";
 import styled from "styled-components";
 
-export const device = {
-	tablet: `min-width: 768px`,
-};
-
 const Card = styled.div`
 	width: 20.9375em;
 	background-color: ${(props) => props.theme.cardBg};
