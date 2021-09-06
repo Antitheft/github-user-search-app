@@ -81,8 +81,6 @@ export default class App extends Component {
 					onClick={this.onButtonClick}
 					currentTheme={this.state.themeSelected}
 				/>
-				{/* <button onClick={this.onButtonClick}>Click</button>
-				<label>{this.state.themeSelected}</label> */}
 				<SearchBar onSubmit={this.onSearchSubmit} />
 				<ProfileCard user={this.state.user} />
 			</ThemeProvider>
