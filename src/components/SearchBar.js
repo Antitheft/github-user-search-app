@@ -64,6 +64,7 @@ const SearchButton = styled.span`
 		background-color: #60abff;
 		cursor: pointer;
 	}
+
 	@media only screen and (min-width: 768px) {
 		width: 6.625em;
 		height: 3.125em;

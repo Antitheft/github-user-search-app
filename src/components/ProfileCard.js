@@ -155,7 +155,7 @@ const ProfileSocials = styled.div`
 	}
 	@media only screen and (min-width: 1000px) {
 		width: 65%;
-		margin-left: 20%;
+		margin-left: 13%;
 	}
 `;
 const Social = styled.div`
@@ -165,6 +165,9 @@ const Social = styled.div`
 	height: 20px;
 	width: 12em;
 	margin-top: 1rem;
+	@media only screen and (min-width: 1000px) {
+		margin-left: 7%;
+	}
 `;
 const SocialImage = styled.img`
 	margin-right: 1rem;
@@ -175,6 +178,15 @@ const SocialLabel = styled.p`
 
 	@media only screen and (min-width: 768px) {
 		font-size: 0.95rem;
+	}
+`;
+
+const Link = styled.a`
+	text-decoration: none;
+	color: ${(props) => props.theme.primaryFC};
+
+	&:hover {
+		text-decoration: underline;
 	}
 `;
 
@@ -220,7 +232,11 @@ const ProfileCard = ({ user }) => {
 				</Social>
 				<Social>
 					<SocialImage src="./assets/icon-website.svg" />
-					<SocialLabel>{user.blog ? user.blog : "Not Available"}</SocialLabel>
+					<SocialLabel>
+						<Link href={user.blog}>
+							{user.blog ? user.blog : "Not Available"}
+						</Link>
+					</SocialLabel>
 				</Social>
 				<Social>
 					<SocialImage src="./assets/icon-twitter.svg" />
