@@ -11,10 +11,6 @@ const HeaderText = styled.h1`
 	color: ${(props) => props.theme.userNameFC};
 `;
 
-const HeaderButton = styled.div`
-	display: flex;
-`;
-
 const ButtonText = styled.p`
 	margin: auto;
 	margin-right: 1rem;
@@ -28,6 +24,20 @@ const ButtonIcon = styled.div`
 	width: 20px;
 	height: 20px;
 	margin: auto;
+`;
+
+const HeaderButton = styled.div`
+	display: flex;
+	&:hover {
+		cursor: pointer;
+
+		${ButtonText} {
+			color: #a8a840;
+		}
+		${ButtonIcon} {
+			opacity: 0.5;
+		}
+	}
 `;
 
 class MainHeader extends React.Component {
