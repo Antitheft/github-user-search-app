@@ -84,7 +84,7 @@ class SearchBar extends React.Component {
 		return (
 			<SearchContainer>
 				<Form onSubmit={this.onFormSubmit}>
-					<SearchIcon src={"./assets/icon-search.svg"} />
+					<SearchIcon src={"./assets/icon-search.svg"} alt="" />
 					<SearchInput
 						type="text"
 						placeholder="Search GitHub Username..."

@@ -190,7 +190,7 @@ const ProfileCard = ({ user }) => {
 	return (
 		<Card>
 			<CardHeader>
-				<Avatar src={user.avatar_url} />
+				<Avatar src={user.avatar_url} alt="avatar" />
 				<ProfileInfo>
 					<UserContainer>
 						<UserName>{user.name}</UserName>
