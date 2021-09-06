@@ -221,13 +221,13 @@ const ProfileCard = ({ user }) => {
 			</ProfileStats>
 			<ProfileSocials>
 				<Social>
-					<SocialImage src="./assets/icon-location.svg" />
+					<SocialImage src="./assets/icon-location.svg" alt="" />
 					<SocialLabel>
 						{user.location ? user.location : "Not Available"}
 					</SocialLabel>
 				</Social>
 				<Social>
-					<SocialImage src="./assets/icon-website.svg" />
+					<SocialImage src="./assets/icon-website.svg" alt="" />
 					<SocialLabel>
 						<Link href={user.blog}>
 							{user.blog ? user.blog : "Not Available"}
@@ -235,13 +235,13 @@ const ProfileCard = ({ user }) => {
 					</SocialLabel>
 				</Social>
 				<Social>
-					<SocialImage src="./assets/icon-twitter.svg" />
+					<SocialImage src="./assets/icon-twitter.svg" alt="" />
 					<SocialLabel>
 						{user.twitter_username ? user.twitter_username : "Not Available"}
 					</SocialLabel>
 				</Social>
 				<Social>
-					<SocialImage src="./assets/icon-company.svg" />
+					<SocialImage src="./assets/icon-company.svg" alt="" />
 					<SocialLabel>
 						{user.company ? user.company : "Not Available"}
 					</SocialLabel>
