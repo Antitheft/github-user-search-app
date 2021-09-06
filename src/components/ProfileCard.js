@@ -43,25 +43,27 @@ const Avatar = styled.img`
 	@media only screen and (min-width: 768px) {
 		width: 7.3125em;
 		height: 7.3125em;
+		margin-top: 2rem;
 	}
 `;
 
 const ProfileInfo = styled.div`
 	line-height: 0.5rem;
 	margin-left: 1rem;
-	transition: 2000ms;
 
 	@media only screen and (min-width: 1000px) {
-		margin-left: 4.5%;
 		width: 75%;
 		display: flex;
+		justify-content: space-between;
+		margin-left: 2rem;
 	}
 `;
+
+const UserContainer = styled.div``;
 
 const UserName = styled.h2`
 	font-weight: 700;
 	font-size: 1rem;
-	margin: 0;
 	color: ${(props) => props.theme.userNameFC};
 
 	@media only screen and (min-width: 768px) {
@@ -76,9 +78,6 @@ const UserLogin = styled.p`
 	@media only screen and (min-width: 768px) {
 		font-size: 1rem;
 	}
-	@media only screen and (min-width: 1000px) {
-		transform: translate(-11em, 0.75em);
-	}
 `;
 
 const JoinedDate = styled.div`
@@ -88,23 +87,21 @@ const JoinedDate = styled.div`
 	@media only screen and (min-width: 768px) {
 		font-size: 0.95rem;
 	}
-	@media only screen and (min-width: 1000px) {
-		margin-left: 3em;
-	}
 `;
 
 const ProfileBio = styled.div`
 	width: 85%;
-
-	margin: 2rem 0;
+	margin: 1.5rem 0;
 	font-size: 0.85rem;
 	color: ${(props) => props.theme.primaryFC};
 
 	@media only screen and (min-width: 768px) {
-		font-size: 0.95rem;
+		font-size: 0.98rem;
+	}
+
+	@media only screen and (min-width: 1000px) {
 		width: 65%;
-		margin-top: 0;
-		margin-left: 20%;
+		margin: -4% 0 4% 20%;
 	}
 `;
 
@@ -187,8 +184,10 @@ const ProfileCard = ({ user }) => {
 			<CardHeader>
 				<Avatar src={user.avatar_url} />
 				<ProfileInfo>
-					<UserName>{user.name}</UserName>
-					<UserLogin>{user.login}</UserLogin>
+					<UserContainer>
+						<UserName>{user.name}</UserName>
+						<UserLogin>{user.login}</UserLogin>
+					</UserContainer>
 					<JoinedDate>
 						Joined&nbsp;
 						<Moment format="DD MMM YYYY">{user.created_at}</Moment>
