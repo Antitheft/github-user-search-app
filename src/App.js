@@ -45,7 +45,7 @@ const themeDark = {
 };
 
 export default class App extends Component {
-	state = { user: [], themeSelected: "D A R K" };
+	state = { user: [], themeSelected: "L I G H T" };
 
 	componentDidMount() {
 		this.onSearchSubmit("Octocat");

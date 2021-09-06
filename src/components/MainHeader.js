@@ -32,7 +32,7 @@ const HeaderButton = styled.div`
 		cursor: pointer;
 
 		${ButtonText} {
-			color: #a8a840;
+			opacity: 0.5;
 		}
 		${ButtonIcon} {
 			opacity: 0.5;
