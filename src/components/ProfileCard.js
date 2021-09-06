@@ -22,6 +22,9 @@ const Card = styled.div`
 	@media only screen and (min-width: 768px) {
 		width: 35.8125em;
 	}
+	@media only screen and (min-width: 1000px) {
+		width: 45.625em;
+	}
 `;
 
 const CardHeader = styled.div`
@@ -30,7 +33,6 @@ const CardHeader = styled.div`
 	justify-content: flex-start;
 	align-items: center;
 	margin-top: 1rem;
-	transition: 250ms;
 `;
 
 const Avatar = styled.img`
@@ -47,6 +49,13 @@ const Avatar = styled.img`
 const ProfileInfo = styled.div`
 	line-height: 0.5rem;
 	margin-left: 1rem;
+	transition: 2000ms;
+
+	@media only screen and (min-width: 1000px) {
+		margin-left: 4.5%;
+		width: 75%;
+		display: flex;
+	}
 `;
 
 const UserName = styled.h2`
@@ -54,6 +63,7 @@ const UserName = styled.h2`
 	font-size: 1rem;
 	margin: 0;
 	color: ${(props) => props.theme.userNameFC};
+
 	@media only screen and (min-width: 768px) {
 		font-size: 1.625rem;
 	}
@@ -62,8 +72,12 @@ const UserName = styled.h2`
 const UserLogin = styled.p`
 	font-size: 0.85rem;
 	color: #0079ff;
+
 	@media only screen and (min-width: 768px) {
 		font-size: 1rem;
+	}
+	@media only screen and (min-width: 1000px) {
+		transform: translate(-11em, 0.75em);
 	}
 `;
 
@@ -74,6 +88,9 @@ const JoinedDate = styled.div`
 	@media only screen and (min-width: 768px) {
 		font-size: 0.95rem;
 	}
+	@media only screen and (min-width: 1000px) {
+		margin-left: 3em;
+	}
 `;
 
 const ProfileBio = styled.div`
@@ -82,8 +99,12 @@ const ProfileBio = styled.div`
 	margin: 2rem 0;
 	font-size: 0.85rem;
 	color: ${(props) => props.theme.primaryFC};
+
 	@media only screen and (min-width: 768px) {
 		font-size: 0.95rem;
+		width: 65%;
+		margin-top: 0;
+		margin-left: 20%;
 	}
 `;
 
@@ -96,6 +117,12 @@ const ProfileStats = styled.div`
 
 	background: ${(props) => props.theme.statsBg};
 	border-radius: 10px;
+	transition: 250ms;
+
+	@media only screen and (min-width: 1000px) {
+		width: 65%;
+		margin-left: 20%;
+	}
 `;
 
 const Stat = styled.div`
@@ -111,6 +138,10 @@ const StatNumber = styled.p`
 	font-size: 1rem;
 	font-weight: 700;
 	color: ${(props) => props.theme.userNameFC};
+
+	@media only screen and (min-width: 768px) {
+		font-size: 1.4rem;
+	}
 `;
 
 const ProfileSocials = styled.div`
@@ -119,10 +150,15 @@ const ProfileSocials = styled.div`
 	display: flex;
 	flex-direction: column;
 	justify-content: flex-start;
+	transition: 250ms;
 
 	@media only screen and (min-width: 768px) {
 		flex-direction: row;
 		flex-wrap: wrap;
+	}
+	@media only screen and (min-width: 1000px) {
+		width: 65%;
+		margin-left: 20%;
 	}
 `;
 const Social = styled.div`
@@ -139,6 +175,10 @@ const SocialImage = styled.img`
 const SocialLabel = styled.p`
 	font-size: 0.8125rem;
 	color: ${(props) => props.theme.primaryFC};
+
+	@media only screen and (min-width: 768px) {
+		font-size: 0.95rem;
+	}
 `;
 
 const ProfileCard = ({ user }) => {
@@ -155,7 +195,9 @@ const ProfileCard = ({ user }) => {
 					</JoinedDate>
 				</ProfileInfo>
 			</CardHeader>
-			<ProfileBio>This profile has no bio.</ProfileBio>
+			<ProfileBio>
+				{user.bio ? user.bio : "This profile has no bio."}
+			</ProfileBio>
 			<ProfileStats>
 				<Stat>
 					<StatHeader>Repos</StatHeader>

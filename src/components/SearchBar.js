@@ -16,6 +16,9 @@ const SearchContainer = styled.div`
 	@media only screen and (min-width: 768px) {
 		width: 35.8125em;
 	}
+	@media only screen and (min-width: 1000px) {
+		width: 45.625em;
+	}
 `;
 const Form = styled.form`
 	width: 100%;
