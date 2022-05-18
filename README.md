@@ -9,3 +9,5 @@ _Built using React JS_
 ## Preview
 
 [Live Preview](https://github-user-search-app-antitheft.netlify.app/)
+
+![video search gif](github-user-search-preview.jpg)
